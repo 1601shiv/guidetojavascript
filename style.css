@@ -1,0 +1,92 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* Lighter gray background */
+    color: #334155; /* Slate gray text */
+}
+
+.code-block {
+    background-color: #1e293b; /* Dark slate background for code */
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    overflow-x: auto;
+    font-family: 'Fira Code', monospace; /* A more developer-friendly font */
+    font-size: 0.9em;
+    border: 1px solid #334155;
+    position: relative;
+}
+
+.code-block .copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #475569;
+    color: #e2e8f0;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.code-block:hover .copy-btn {
+    opacity: 1;
+}
+
+.nav-link {
+    transition: all 0.2s ease-in-out;
+    border-left: 3px solid transparent;
+    color: #475569;
+}
+
+.nav-link.active {
+    background-color: #e2e8f0;
+    color: #0f172a;
+    font-weight: 600;
+    border-left-color: #3b82f6; /* Blue accent for active link */
+}
+
+.nav-link:hover {
+    background-color: #e2e8f0;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.quiz-option {
+    transition: all 0.2s ease-in-out;
+}
+
+.quiz-option:hover {
+    background-color: #e2e8f0;
+    border-color: #94a3b8;
+}
+
+.quiz-question.correct .options label.selected {
+    border-color: #22c55e;
+    background-color: #f0fdf4;
+}
+
+.quiz-question.incorrect .options label.selected {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+.quiz-question.correct .options label.correct-answer {
+     border-color: #22c55e;
+     background-color: #f0fdf4;
+     font-weight: 600;
+}
